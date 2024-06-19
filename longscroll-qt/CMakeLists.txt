@@ -16,6 +16,8 @@ add_library(longscroll
     contentwidget.cpp contentwidget.h
     contentwidgetitemfactory.cpp
     imageinfowidget.cpp imageinfowidget.h   imageinfowidget.ui
+    imageitemwidget.cpp imageitemwidget.h
+    imagewidget.cpp imagewidget.h
     longscrollwidget.cpp longscrollwidget.h
     navigatorwidget.cpp navigatorwidget.h navigatorwidget.ui
     notifyablescrollcontentwidget.cpp notifyablescrollcontentwidget.h
@@ -24,6 +26,6 @@ add_library(longscroll
 
 target_link_libraries(longscroll PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
 
-target_include_directories(longscroll PRIVATE ./)
+target_include_directories(longscroll PUBLIC ../)
 
-target_compile_definitions(longscroll PRIVATE LONGSCROLL_LIBRARY)
+# target_compile_definitions(longscroll PRIVATE LONGSCROLL_LIBRARY)
